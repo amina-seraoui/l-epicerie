@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    input {
+        padding: ratio-space(1px) ratio-space(2px);
+        border-bottom: solid 1px $primary-color;
+        margin: 0 ratio-space(1px) ratio-space(1px) 0;
+        border-radius: 2px;
+    }
+
+    input[type='submit'] {
+        @extend button;
+    }
+}

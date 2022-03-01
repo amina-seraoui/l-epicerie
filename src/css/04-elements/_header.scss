@@ -1,0 +1,18 @@
+header {
+    padding: ratio-space(2px);
+    background-color: $primary-color;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 124px;
+        }
+        h1 {
+            margin-left: ratio-space(1px);
+        }
+    }
+}

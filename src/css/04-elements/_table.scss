@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    thead, tbody {
+        tr {
+            td, th {
+                padding: ratio-space(2px);
+                text-align: center;
+            }
+            th {
+                font-weight: 600;
+                background: lighten($blue, 15);
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+    }
+
+    tbody {
+        tr:nth-child(even) {
+            background: lighten($blue, 55);
+        }
+    }
+}

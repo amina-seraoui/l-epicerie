@@ -1,0 +1,15 @@
+@include font-face('Bazar', 'Regular', 500, normal, ttf)
+
+h1 {
+    font-size: rem(20px);
+    font-family: $font-secondary;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: rem(20px);
+    text-transform: uppercase;
+    text-align: center;
+    margin: ratio-space(4px) 0;
+    font-weight: 600;
+}
