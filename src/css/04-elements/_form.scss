@@ -3,6 +3,7 @@ form {
     justify-content: center;
     flex-wrap: wrap;
     gap: ratio-space(1px);
+
     input {
         padding: ratio-space(1px) ratio-space(2px);
         border-bottom: solid 1px $primary-color;
@@ -13,7 +14,7 @@ form {
                 width: 90%;
             }
             &:nth-child(2), &:nth-child(3) {
-                width: 45%;
+                width: calc(45% - #{ratio-space(.5px)});
             }
         }
 
