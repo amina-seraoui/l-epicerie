@@ -5,16 +5,25 @@ table {
             td, th {
                 padding: ratio-space(2px);
                 text-align: center;
+                width: 25%;
 
                 &.danger {
                     color: $danger-color;
                 }
             }
             th {
+                word-break: break-word;
                 font-weight: 600;
                 background: lighten($blue, 15);
                 text-transform: uppercase;
                 color: $white;
+
+            }
+            @media #{$media-down-md} {
+                td, th {
+                    font-weight: 400;
+                    font-size: 14px;
+                }
             }
         }
     }
