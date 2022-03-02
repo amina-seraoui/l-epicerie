@@ -2,20 +2,23 @@ import {useState} from 'react'
 
 const Form = ({ setItems }) => {
 	const [name, setName] = useState('');
-	const [qte, setQte] = useState(0);
+	const [qte, setQte] = useState(1);
 	const [price, setPrice] = useState('');
 
 	const handleSubmit = e => {
 		e.preventDefault()
-
-		setItems(prev => {
-			const clone = [...prev]
-			clone.push({name, qte, price})
-			return clone
-		})
-		setName('')
-		setQte(0)
-		setPrice('')
+		if (name !== '' && price.match(/\d/) && qte >= 0) {
+			setItems(prev => {
+				const clone = [...prev]
+				clone.push({name, qte: parseInt(qte), price})
+				return clone
+			})
+			setName('')
+			setQte(0)
+			setPrice('')
+		} else {
+			console.log('Données invalides : veuillez saisir un nom, une quantité positive et un prix valide')
+		}
 	}
 
 	return <form onSubmit={handleSubmit}>

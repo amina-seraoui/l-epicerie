@@ -17,6 +17,10 @@ const List = ({ items, setItems }) => {
         setItems(clone)
     }
 
+    const doSomething = e => {
+        // to do
+    }
+
     return <table>
         <thead>
             <tr>
@@ -37,6 +41,7 @@ const List = ({ items, setItems }) => {
                         <button onClick={e => addOne(id)}><span>+1</span></button>
                         <button onClick={e => removeOne(id)} className="secondary"><span>-1</span></button>
                         <button onClick={e => remove(id)} className="danger"><span>Retirer</span></button>
+                        { item.qte > 0 ? null : <button onClick={doSomething}><span>Recommander</span></button> }
                     </td>
                 </tr>
             })
