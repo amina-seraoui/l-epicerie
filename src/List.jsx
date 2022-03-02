@@ -26,7 +26,7 @@ const List = ({ items, setItems }) => {
             <tr>
                 <th>Nom</th>
                 <th>Quantité</th>
-                <th>Prix unitaire</th>
+                <th>Prix</th>
                 <th>Action</th>
             </tr>
         </thead>
