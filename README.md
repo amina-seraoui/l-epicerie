@@ -9,5 +9,5 @@ Il a été débuté avec [Create React App](https://github.com/facebook/create-r
 
 ## To-do
 - [X] réaliser les fonctionnalités demandées
-- [ ] terminer le design
-- [ ] rendre responsive
+- [X] terminer le design
+- [X] rendre responsive

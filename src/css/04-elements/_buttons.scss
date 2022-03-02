@@ -3,15 +3,48 @@ button {
     color: $white;
     padding: ratio-space(1px) ratio-space(2px);
     border-radius: 5px;
-    margin: 0 ratio-space(1px);
+    margin: ratio-space(.5px) ratio-space(1px);
     text-transform: uppercase;
     font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: .2s;
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        top: 0;
+        right: 200%;
+        background: darken($primary-color, 15);
+        transition: .3s;
+        transform: skew(-25deg);
+    }
+
+    &:hover {
+        box-shadow: 1px 1px 4px 2px $grey;
+        &:after {
+            right: -50%;
+        }
+    }
 
     &.secondary {
         color: $font-color;
         background: $secondary-color;
+        &:after {
+            background: darken($secondary-color, 15);
+        }
     }
     &.danger {
         background: $danger-color;
+        &:after {
+            background: darken($danger-color, 15);
+        }
     }
 }

@@ -5,6 +5,10 @@ table {
             td, th {
                 padding: ratio-space(2px);
                 text-align: center;
+
+                &.danger {
+                    color: $danger-color;
+                }
             }
             th {
                 font-weight: 600;

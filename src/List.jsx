@@ -7,7 +7,7 @@ const List = ({ items, setItems }) => {
 
     const removeOne = id => {
         const clone = [...items]
-        clone[id].qte--
+        if (clone[id].qte > 0) clone[id].qte--
         setItems(clone)
     }
 
@@ -31,12 +31,12 @@ const List = ({ items, setItems }) => {
             items.map((item, id) => {
                 return <tr key={id}>
                     <td>{ item.name }</td>
-                    <td>{ item.qte }</td>
+                    <td className={item.qte > 0 ? '' : 'danger'}>{ item.qte > 0 ? item.qte : 'Rupture de stock' }</td>
                     <td>{ item.price } €</td>
                     <td>
-                        <button onClick={e => addOne(id)}>+1</button>
-                        <button onClick={e => removeOne(id)} className="secondary">-1</button>
-                        <button onClick={e => remove(id)} className="danger">Retirer</button>
+                        <button onClick={e => addOne(id)}><span>+1</span></button>
+                        <button onClick={e => removeOne(id)} className="secondary"><span>-1</span></button>
+                        <button onClick={e => remove(id)} className="danger"><span>Retirer</span></button>
                     </td>
                 </tr>
             })
